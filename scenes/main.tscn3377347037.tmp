@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cuphv6roryhw6"]
+
+[ext_resource type="Script" uid="uid://cqxd7u0ns23x8" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://but4yvs6ky5db" path="res://assets/bg.png" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cfiaw8ca41cw1" path="res://scenes/snake_segement.tscn" id="2_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://de6t7hb5wpod5" path="res://scenes/hud.tscn" id="3_tbgi4"]
+
+[node name="Main" type="Node" unique_id=564904242]
+script = ExtResource("1_sugp2")
+snake_scene = ExtResource("2_tbgi4")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1832489392]
+position = Vector2(500, 550)
+texture = ExtResource("2_jyhfs")
+
+[node name="Hud" parent="Background" unique_id=1636025535 instance=ExtResource("3_tbgi4")]
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=1607258626]
+wait_time = 0.1
