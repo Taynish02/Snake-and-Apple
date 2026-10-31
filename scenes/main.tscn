@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://but4yvs6ky5db" path="res://assets/bg.png" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cfiaw8ca41cw1" path="res://scenes/snake_segement.tscn" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://de6t7hb5wpod5" path="res://scenes/hud.tscn" id="3_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://b004u33gh2tll" path="res://assets/apple.png" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://6bpxmc2seh32" path="res://scenes/game_over_menu.tscn" id="6_tefeu"]
 
 [node name="Main" type="Node" unique_id=564904242]
 script = ExtResource("1_sugp2")
@@ -17,3 +19,11 @@ texture = ExtResource("2_jyhfs")
 
 [node name="MoveTimer" type="Timer" parent="." unique_id=1607258626]
 wait_time = 0.1
+
+[node name="Food" type="Sprite2D" parent="." unique_id=1490983767]
+texture = ExtResource("5_tbgi4")
+offset = Vector2(25, 25)
+
+[node name="GameOverMenu" parent="." unique_id=1378457159 instance=ExtResource("6_tefeu")]
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
