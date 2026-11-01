@@ -25,5 +25,10 @@ texture = ExtResource("5_tbgi4")
 offset = Vector2(25, 25)
 
 [node name="GameOverMenu" parent="." unique_id=1378457159 instance=ExtResource("6_tefeu")]
+process_mode = 2
 
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="pressed" from="GameOverMenu/Restartbutton" to="." method="_on_restartbutton_restart"]
+[connection signal="restart" from="GameOverMenu/Restartbutton" to="." method="_on_restartbutton_restart"]
+
+[editable path="GameOverMenu"]

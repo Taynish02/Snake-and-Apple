@@ -12,7 +12,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[node name="SnakeSegement" type="Panel" unique_id=545859179]
+[node name="SnakeSegement" type="Panel" unique_id=545859179 groups=["segments"]]
 offset_right = 50.0
 offset_bottom = 50.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1v2he")

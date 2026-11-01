@@ -3,6 +3,11 @@
 [ext_resource type="FontFile" uid="uid://beokhv38lfwlr" path="res://assets/MaldiniBold.ttf" id="1_6ebp1"]
 [ext_resource type="Script" uid="uid://c84nln7xhu82e" path="res://scripts/restartbutton.gd" id="2_cwb3k"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1v2he"]
+bg_color = Color(0, 0.23921569, 0.30588236, 1)
+shadow_size = 5
+shadow_offset = Vector2(10, 10)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohf2h"]
 bg_color = Color(0, 0.6117647, 0.17254902, 1)
 
@@ -12,25 +17,7 @@ bg_color = Color(0, 0.57254905, 0.6313726, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a46wf"]
 bg_color = Color(0, 0.7372549, 0.16862746, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1v2he"]
-bg_color = Color(0, 0.23921569, 0.30588236, 1)
-shadow_size = 5
-shadow_offset = Vector2(10, 10)
-
 [node name="GameOverMenu" type="CanvasLayer" unique_id=1378457159]
-
-[node name="Restartbutton" type="Button" parent="." unique_id=1840541339]
-offset_left = 375.0
-offset_top = 545.0
-offset_right = 625.0
-offset_bottom = 608.0
-theme_override_fonts/font = ExtResource("1_6ebp1")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_ohf2h")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_u1lo2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_a46wf")
-text = "Play Again"
-script = ExtResource("2_cwb3k")
 
 [node name="GameOverPanel" type="Panel" parent="." unique_id=1721564214]
 anchors_preset = 8
@@ -63,3 +50,16 @@ theme_override_font_sizes/font_size = 50
 text = "GAME OVER!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Restartbutton" type="Button" parent="." unique_id=1840541339]
+offset_left = 375.0
+offset_top = 545.0
+offset_right = 625.0
+offset_bottom = 608.0
+theme_override_fonts/font = ExtResource("1_6ebp1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ohf2h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u1lo2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a46wf")
+text = "Play Again"
+script = ExtResource("2_cwb3k")

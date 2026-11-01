@@ -34,7 +34,8 @@ func _ready():
 	
 func new_game():
 	get_tree().paused = false
-	$GameOverMenu.hide()
+	get_tree().call_group("segments", "queue_free")
+	$GameOverMenu.hide()	
 	score = 0
 	$Hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
 	move_direction = up
@@ -137,3 +138,8 @@ func end_game():
 	$MoveTimer.stop()
 	game_started = false
 	get_tree().paused = true
+
+
+func _on_restartbutton_restart() -> void:
+	get_tree().paused = false
+	new_game()
